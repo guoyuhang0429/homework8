@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes animation1{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes animation2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .con{
+            width:1200px;
+            height:50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            opacity: 0.9;
+            color:white;
+            flex-direction: row;
+        }
+        .con>div{
+            width:600px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            opacity: 0.9;
+            color:white;
+            flex-direction: row;
+        }
+        .con2{
+            font-size: 12px;
+        }
+        .box{
+            display: flex;
+            align-items: center;
+        }
+        .box :first-child{
+            width:30px;
+            height:30px;
+            background-image: url("images/8x7cejPCVRaEBEDHg7ezDs.png");
+            background-position:74% 9%;
+        }
+        .con1{
+            font-size: 16px;
+        }
+        #fpage{
+            color:orange;
+        }
+        .search{
+            width:150px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .search :first-child{
+            float:left;
+            width:10px;
+            margin-right:10px;
+        }
+        .search div:nth-child(2){
+            width:120px;
+            height:30px;
+            line-height: 30px;
+            background-image: url("images/hRzX3n2eFHEyPd93FriVox.png");
+            background-position: 90% 70%;
+            border-radius: 10px 10px;
+            opacity: 0.5;
+        }
+        .content{
+            width:1200px;
+            height:450px;
+            margin-top:50px;
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .l_content{
+            width:800px;
+            float:right;
+            text-align: center;
+            font-size: 12px;
+            color:rgba(0,0,0,0.6);
+        }
+        h3{
+            color:black;
+            font-weight:normal;
+            font-size:16px;
+        }
+        .l_content>div{
+            width:500px;
+            margin-right:150px;
+            margin-left:150px;
+        }
+
+        .l_content span{
+            color:orange;
+        }
+        .l_content img{
+            margin-left:10px;
+            margin-right: 10px;
+            width:14px;
+            height:13px;
+        }
+        .l_content span{
+            margin-right: 10px;
+        }
+        .r_content{
+            width:400px;
+        }
+        .r_content img{
+            border-radius: 50% 50%;
+            animation:animation2 5s linear 0s infinite;
+        }
+        .play{
+            height:40px;
+            width:350px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+        .play>div:nth-child(1){
+            width:42px;
+            height:40px;
+            background-image: url("images/ft4wYB2sBrTzcGpwteSquz.jpg");
+            background-position: 46% 1%;
+        }
+        .wp_bar{
+            width:220px;
+            height:4px;
+        }
+        .wp_bar{
+            width:220px;
+            height:4px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .wp_processbar{
+            width:0px;
+            height:4px;
+            background-color: orange;
+        }
+        #wp_processBtn{
+            position: absolute;
+            float:left;
+            background-color: orchid;
+            width:12px;
+            height:10px;
+            background-image: url("images/ft4wYB2sBrTzcGpwteSquz.jpg");
+            background-position:8% 0%;
+            top:-3px;
+            
+        }
+        .play>div:nth-child(4){
+            width:30px;
+            height:20px;
+            background-image: url("images/ft4wYB2sBrTzcGpwteSquz.jpg");
+            background-position:27% 0%;
+        }
+
+        .download{
+            text-align:left;
+            width:200px;
+            height:45px;
+            line-height: 50px;
+            background-image: url("images/ft4wYB2sBrTzcGpwteSquz.jpg");
+            background-position:bottom left ;
+            margin-top:30px;
+            margin-left:50px;
+        }
+        .download div{
+            float:left;
+            margin-left:30px;
+            margin-top:15px;
+            width:18px;
+            height:17px;
+            background-image: url("images/ft4wYB2sBrTzcGpwteSquz.jpg");
+        }
+        .download a{
+            color:black;
+            text-decoration: none;
+        }
+        .girl{
+            margin-top:50px;
+            display: flex;
+            flex-direction:row;
+        }
+        .girl img{
+            width:60px;
+            height:60px;
+        }
+        .live{
+            width:250px;
+            height:54px;
+            background-image: url("images/showAdBg.jpg");
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .live>p{
+            color:#ccc;
+            font-size: 14px;
+            margin:0 20px;
+        }
+        .sheep img{
+            margin-left: 20px;
+            width:20px;
+            height:20px;
+            float:left;
+            border-radius: 0px;
+        }
+        .sheep p{
+            margin:0px;
+            font-size: 15px;
+        }
+        .sheep a{
+            float:right;
+            padding-right:10px;
+            text-decoration: none;
+        }
+        .comment{
+            width:600px;
+        }
+        .comment img{
+            width:50px;
+            height:50px;
+            float:left;
+            margin-right: 20px;
+        }
+        .comment>p span{
+            font-size: 12px;
+            color:gray;
+        }
+        .comment textarea{
+            border:1px solid #ccc ;
+            width:520px;
+            height:80px;
+        }
+        .comment button{
+            width:80px;
+            height:30px;
+            background-color:orange;
+            color:white;
+            border:none;
+            float:right;
+        }
+        .excellent_comment{
+            width:600px;
+            height:360px;
+        }
+        .excellent_comment>div{
+            height:90px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .excellent_comment img{
+            width:50px;
+            height:50px;
+            float:left;
+            margin-right: 20px;
+        }
+        .info{
+            width:600px;
+            height:80px;
+            position: relative;
+        }
+        .name{
+            color:orange;
+            margin:5px 0px;
+        }
+        .p_content{
+            margin:4px 0px;
+        }
+        .submit_time{
+            position: absolute;
+            font-size: 12px;
+            margin:0;
+            top:85%;
+            left:12%;
+        }
+        .page_icon button{
+            width:20px;
+            height:20px;
+            border-radius: 50%;
+            background-color:#ccc;
+            float:left;
+            margin-left:10px;
+            border:none;
+            margin-bottom: 40px;
+            margin-top:10px;
+        }
+        #more{
+            background: none;
+        }
+        .page_icon button:nth-child(2){
+            background-color: orange;
+            color:white;
+        }
+        .name span{
+            float:right;
+            color:black;
+            font-size: 12px;
+        }
+        .replay{
+            float:right;
+            font-size:13px;
+            color:black;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class = "con">
+        <div class = "con1">
+            <img src = "images/EBbGwpYnuxzNj2n4pu4QWG.jpg">
+            <div id = "fpage">首页</div>
+            <div>榜单</div>
+            <div>歌手</div>
+            <div>下载酷我客户端</div>
+        </div>
+        <div class = "con2">
+            <div class = "box">
+                <div></div>
+                <div>美女秀</div>
+            </div>
+            <div class = "box">
+                <div></div>
+                <div>酷我耳机</div>
+            </div>
+            <div class = "box">
+                <div></div>
+                <div>VIP会员</div>
+            </div>
+            <div class = "box">
+                <div></div>
+                <div>听</div>
+            </div>
+            <div>更多服务</div>
+            <div>登录</div>
+            <div class = "search">
+                <div>^</div>
+                <div>找到好音乐</div>
+            </div>
+        </div>   
+    </div>
+    <div class = "content">
+        <div class = "l_content">
+            <div>
+            <h3>喜羊羊</h3>
+            <div class = "first">专辑:<span>儿歌大全</span>    歌手:<span>华语群星</span>    分享    <img src = "images/bbHRbrtQkXjFLRSChCcxPi.jpg"><span>评论</span></div>
+            <p>上传时间 2015-10-02 歌词来源：网络</p>
+            <hr/>
+            <p>喜羊羊 美羊羊 懒羊羊 沸羊羊</p> 
+            <p>慢羊羊 软绵绵 红太狼 灰太狼</p>
+            <p>别看我只是一只羊</p> 
+            <p>绿草因为我变得更香</p>
+            <p>天空因为我变得更蓝</p> 
+            <p>白云因为我变得柔软</p>                 
+            <p>在什么时间 都爱开心 笑容都会飞翔</p>
+            <p>就算会摔倒 站了起来 永远不会沮丧</p>
+            <p>在所有天气 拥有叫人 大笑的力量</p>
+            </div>
+        </div>
+        <div class = "r_content">
+            <img id = "img" src = "images/nJA5uhS7NxNWUhVyAzNN5q.jpg">
+            <audio autoplay = "autoplay" id = "mymusic">
+                <source src = "古倩敏 _ 杨沛宜 - 别看我只是一只羊.mp3" type = "audio/mp3"></audio>
+            </audio>
+            <div class = "play">
+                <div id = "play_btn"></div>
+                <div class = "wp_bar">
+                    <div class = "wp_process">
+                        <div class = "wp_processbar">
+                        <a href="##" id="wp_processBtn" style="left: 0;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id = "time">00:00</div>
+                <div id = "wp_mute"></div>
+            </div>
+            <div class = "download">
+                <div></div>
+                <a href = "#">免费下载这首歌</a>
+            </div>
+            <div class = "girl">
+                <img src = "images/郭子仪.jpg">
+                <div class = "live">
+                    <p>郭子仪———H5班</p>
+                    <div class = "sheep">
+                        <img src = "images/gif.gif">
+                        <p>喜羊羊与灰太狼<a href = "##">去现场 ></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "comment">
+        <p>评论 <span>1703条评论</span></p>
+        <hr/>
+        <img id = "comment_img" src = "images/郭子仪.jpg">
+        <textarea placeholder="分享你的音乐见解" rows = "10" cols="35"></textarea>
+        <div>
+            <button id = "comment_btn">评论</button>
+        </div>
+    </div>
+    <div class = "excellent_comment">
+        <p>精彩评论</p>
+        <hr/>
+        <div>
+            <img class = "user_pic" src = "images/郭子仪.jpg">
+            <div class = "info">
+            <p class = "name">郭子仪<span>分享</span></p>
+            <p class = "p_content">aaa2</p>
+            <p class = "submit_time">2021-6-8 17:53</p>
+            <p class = "replay">回复</p>
+            </div>
+        </div>
+        <div>
+            <img class = "user_pic" src = "images/fDRw8gm9XazHuqiccYQiyb.jpg">
+            <div class = "info">
+            <p class = "name">forget<span>分享</span></p>
+            <p class = "p_content">很好听</p>
+            <p class = "submit_time">2021-6-8 19:11</p>
+            <p class = "replay">回复</p>
+            </div>
+        </div>
+        <div>
+            <img class = "user_pic" src = "images/fDRw8gm9XazHuqiccYQiyb.jpg">
+            <div class = "info">
+            <p class = "name">亚里士多德<span>分享</span></p>
+            <p class = "p_content">非常好听</p>
+            <p class = "submit_time">2021-6-8 19:11</p>
+            <p class = "replay">回复</p>
+            </div>
+        </div>
+    </div>
+    <dic class = "page_icon">
+        <div>
+            <button href = "#" id = "pre_page"><</button>
+            <button href = "#" class = "page">1</button>
+            <button class = "page">2</button>
+            <button class = "page">3</button>
+            <button id = "more">...</button>
+            <button id = "last_page">9</button>
+            <button id = "next_page">></button>
+        </ul>
+    </dic>
+</body>
+<script>
+    var mymusic = document.getElementById("mymusic");
+    var play_btn = document.getElementById("play_btn");
+    var intervalId;
+    var time = document.getElementById("time");
+    var wp_processbar = document.getElementsByClassName("wp_processbar")[0];
+    var wp_processBtn = document.getElementById("wp_processBtn");
+    var wp_mute = document.getElementById("wp_mute");
+    var temp = 0;
+    var img = document.getElementById("img");
+    var comment_btn = document.getElementById("comment_btn");
+    var comment_img = document.getElementById("comment_img");
+    var text_box = document.getElementsByTagName("textarea")[0];
+    var user_pic = document.getElementsByClassName("user_pic");
+    var name = document.getElementsByClassName("name");
+    var p_content = document.getElementsByClassName("p_content");
+    var submit_time = document.getElementsByClassName("submit_time");
+    var last_page = document.getElementById("last_page");
+    var current_page = 1;
+    var last_page = document.getElementById("last_page");
+    var pre_page = document.getElementById("pre_page");
+    var page = document.getElementsByClassName("page");
+    //播放器
+    play_btn.onclick = function(){
+        if(mymusic.paused){
+            mymusic.play();
+            play_btn.style.backgroundPosition = "88% 1%";
+            img.style.animation = "animation1 5s linear 0s infinite";
+            intervalId = setInterval(function(){
+                time.innerHTML = ("00"+ parseInt(mymusic.currentTime/60)).slice(-2) + ":" + ("00" + parseInt(mymusic.currentTime%60)).slice(-2);
+                wp_processbar.style.width = (mymusic.currentTime/mymusic.duration)*220 + "px";
+                wp_processBtn.style = "left:" + (mymusic.currentTime/mymusic.duration)*100 + "%";
+            },1000);
+        }
+        else{
+            mymusic.pause();
+            play_btn.style.backgroundPosition = "46% 1%";
+            clearInterval(intervalId);
+            img.style.animation = "animation2 5s linear 0s infinite";
+        }
+    }
+    //静音按钮
+    wp_mute.onclick = function(){
+        temp++;
+        if(temp%2 != 0){
+            mymusic.muted = true;
+        }
+        else{
+            mymusic.muted = false;
+        }
+    }
+    //点击按钮保存信息并在页面上显示
+    comment_btn.onclick = function(){
+        var list = localStorage["list"];
+        //list = localStorage["list"];
+        if(list == null || list == ""){
+            list = "[]";
+        }
+        list = JSON.parse(list);
+        var obj = {
+            text:text_box.value,
+            time:getTime()
+        }
+        list.push(obj);
+        list = JSON.stringify(list);
+        localStorage["list"] = list;
+        text_box.value ="";
+        modify();
+    }
+    //获取提交评论时的时间
+    function getTime(){
+        var now = new Date();
+        var month = now.getMonth() + 1;
+        return(`${now.getFullYear()}-${month}-${now.getDate()}  ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`);
+    }
+    //加载时显示本地存储到页面上
+    window.onload = function(){
+        modify();
+    }
+    //从本地存储读评论显示到页面上
+    function modify(){
+        var list = localStorage["list"];
+        if(list == null || list == ""){
+            list = "[]";
+        }
+        list = JSON.parse(list);
+        let length = list.length;
+        for(i=0;i<3;i++){
+            p_content[i].innerHTML = list[length-i-1]["text"];
+            submit_time[i].innerHTML = list[length-i-1]["time"];
+        }
+        if(length%3 == 0){
+            last_page.innerHTML = length/3;            
+        }
+        else{
+            last_page.innerHTML = parseInt(length/3) +1 ;    
+        }
+        list = JSON.stringify(list);
+    }
+    //点击实现向后翻页
+    next_page.onclick = function(){
+        current_page += 1;
+        for(var i = 0; i<3;i++){
+            if(current_page == page[i].innerHTML){
+                console.log(page[i].innerHTML);
+                page[i].style.backgroundColor = "orange";
+                page[i].style.color = "white";
+                page[i-1].style.backgroundColor = "#ccc";
+                page[i-1].style.color = "black";                    
+            }
+        }
+        if(current_page == last_page.innerHTML){
+            last_page.style.backgroundColor = "orange";
+            last_page.style.color = "white";
+            page[2].style.backgroundColor = "#ccc";
+            page[2].style.color = "black";            
+        }
+        if(current_page != last_page.innerHTML && current_page>3){
+            page[2].style.backgroundColor = "#ccc";
+            page[2].style.color = "black";
+        }
+        //list = localStorage["list"];
+        var list = localStorage["list"];
+        if(list == null || list == ""){
+            list = "[]";
+        }
+        list = JSON.parse(list);
+        let length = list.length - 3*(current_page-1);
+        for(i=0;i<3;i++){
+            p_content[i].innerHTML = list[length-i-1]["text"];
+            submit_time[i].innerHTML = list[length-i-1]["time"];
+        }
+        list = JSON.stringify(list);
+    }
+    //点击向前翻页
+    pre_page.onclick = function(){
+        current_page -= 1;
+        for(var i = 0; i<3;i++){
+            if(current_page == page[i].innerHTML){
+                page[i].style.backgroundColor = "orange";
+                page[i].style.color = "white";
+                page[i+1].style.backgroundColor = "#ccc";
+                page[i+1].style.color = "black";                
+            }
+        }
+        if(current_page != last_page.innerHTML){
+            last_page.style.backgroundColor = "#ccc";
+            last_page.style.color = "black"; 
+        }
+        var list = localStorage["list"];
+        if(list == null || list == ""){
+            list = "[]";
+        }
+        list = JSON.parse(list);
+        console.log(list.length);
+        let length = list.length - 3*(current_page-1);
+        for(i=0;i<3;i++){
+            p_content[i].innerHTML = list[length-1-i]["text"];
+            submit_time[i].innerHTML = list[length-1-i]["time"];
+        }
+        list = JSON.stringify(list);
+    }
+</script>
+</html>
